@@ -1,4 +1,4 @@
-# Snake and Ladder Game
+# Text -based Snake and Ladder Game
 This is a simple Snake and Ladder game implemented in Python using loops and the random module.
 
 ## How to Play
