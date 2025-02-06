@@ -10,8 +10,7 @@ position=1
 print(f' position ={position}' , '\n')
 #Game loop
 while True :
-    #Ask the player if they want to play
-    status = input('wanna play ? , type no if u dont : \n ')
+    status = input('\n ')
     if status=='no':
         print(f' position ={position}' , '\n')
         print(' Bye then ')
@@ -20,13 +19,21 @@ while True :
     step=roll_dice()
     #check if the new position is in snake or ladder 
     if position+step in snakes :
+        print('Oops!! you got bitten by a snake!! :( ')
         position =snakes[position+step]
     elif position+step in ladders:
         position= ladders[position+step]
+        print('Cool!! You climbed a ladder!! :)')
         
-    else:
+    elif position+step<=100:
          position+=step 
-         
+    if position+step>100:
+         print('Oops , You crossed 100!! try again :(')   
     print(f' position ={position}', '\n')
+    
+    if position==100:
+         print("🎉 Congrats!! YOU WON!! 🎉")
+         break
+
       
                                               
